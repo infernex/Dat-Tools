@@ -1,0 +1,33 @@
+.contenedor{
+/* margin-top: 50px;
+margin-bottom: 50px;
+max-width: 400px;
+min-height: 400px; */ 
+min-height: 300px;
+max-width: 300px;
+background: #ffffff; 
+/* border-radius: 5px; */
+border-radius: 10px;
+/* padding: 10px; */
+margin-top:15px;
+/* border: 1px solid #C7E0FF; */
+margin-right: 10px;
+}
+.card-suscript-main{
+    min-height: 270px;
+    max-width: 300px;
+    /* min-height: 300px;
+    max-width: 300px; */
+}
+.card-suscript{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height: 270px;
+    max-width: 300px;
+    background: #1E87F0;
+    border-radius: 10px;
+    /* padding: 10px; */
+    /* padding-top: 40px; */
+    /* border: 1px solid #C7E0FF; */
+     /* margin-right: 10px; */
+}

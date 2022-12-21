@@ -1,0 +1,27 @@
+ <section class="container-fluid" style="margin-left:0;margin-right:0;">
+
+    <div class="wrapper ">
+      <div class=" container uk-card uk-card-default " style="max-width: 450px; border-radius: 10px;">
+        <div class="tab">
+          <button class="tablinks active" onclick="openTab(event, 'sesion')">Iniciar Sesion  </button>
+          <button class="tablinks" onclick="openTab(event, 'registro')"> Registrarse</button>
+        </div>
+        <div class="row">
+          <div class="col-md-12 offset-md-1" >
+            <div id="sesion" class="tabcontent" style="display: block">
+              <app-login></app-login>
+            </div>
+            
+            <div id="registro" class="tabcontent">
+              <app-registration></app-registration>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+
+
+

@@ -1,0 +1,30 @@
+.list-option-profile li{
+    margin-bottom: 0px;
+}
+
+.sidebar-profile li p{
+    cursor: pointer;
+    // background: yellow;
+    :focus {outline:0;}
+    color: #999999;
+    padding: 10px;
+}
+
+// .sidebar-profile li p:active { outline:none; }
+// .sidebar-profile li p:active {
+//     outline: none;
+//     border: none;
+//     }
+    .sidebar-profile li p:focus {outline:0;}
+.link-profile-select p{
+    color: #ffffff !important;
+    background: #1e87f0;
+     padding: 10px;
+    border-radius: 2px;
+    
+    transition: 0.5s;
+    width: 100% !important;
+    box-shadow: rgb(227, 233, 243) 0px 2px 4px !important;
+    
+  
+}

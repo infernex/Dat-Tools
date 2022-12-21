@@ -1,0 +1,39 @@
+
+<div class="logo">
+    <a routerLink="/dashboard" class="simple-text logo-mini">
+      <div class="logo-img">
+          <img src="./assets/img/logos/iconDat.png"/>
+      </div>
+    </a>
+    <a href="" class="simple-text logo-normal">
+        Dat-Tools
+    </a>
+</div>
+<div class="sidebar-wrapper">
+    <ul  class="nav">
+        <li [class]="getClaseCSS(0)" (click)="activarCategoria(0,'Todas las categorias')">
+            <p>{{dashLabelAllCategories}}</p>
+        </li>
+           
+        <li *ngFor="let item of dashboardsCat" [class]="getClaseCSS(item.dashboardCategoryId)"
+        (click)="activarCategoria(item.dashboardCategoryId,item.name)">
+        <!-- <i class="now-ui-icons design_bullet-list-67"></i> -->
+        <p>{{item.name}}</p>
+       
+        </li>
+        <li *ngIf="isLogin && isAdminOrInstructor" [class]="getClaseCSSMode()" (click)="activarModoAdmin()">
+            <!-- <i class="now-ui-icons design_bullet-list-67"></i> -->
+            <p>Administrar Dashboards</p>
+           
+            </li>
+    </ul>
+    
+    <!-- <ul class="nav">
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+            <a [routerLink]="[menuItem.path]">
+                <i class="now-ui-icons {{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul> -->
+</div>

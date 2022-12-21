@@ -1,0 +1,67 @@
+<div class="card">
+  <div class="card-header">
+    <h5 class="title">Editar perfil</h5>
+  </div>
+  <div class="card-body">
+    <!-- <hr style=" height: 1px; margin:5px 0px 20px 0px; border-top: 2px solid rgba(179, 179, 179, 0.1);">  -->
+    <form id="editUserProfileForm" [formGroup]="userProfileForm" autocomplete="off" (ngSubmit)="save()"
+      style="margin-bottom: 50px;">
+      <dl class="uk-description-list  uk-text-left"
+        style=" margin-left: auto; margin-right: auto; margin-top: 30px; max-width: 500px;">
+        <label>Nombre</label>
+        <input class="uk-input uk-text-center" formControlName="fullName" type="text" placeholder="" />
+
+        <label>Usuario</label>
+        <input class="uk-input uk-text-center" formControlName="userName" type="text" placeholder="" />
+        <label class="text-danger validate-text" *ngIf="
+            userProfileForm.get('userName').touched &&
+            userProfileForm.get('userName').errors?.required
+          ">Este campo es obligatorio</label>
+
+        <label>Correo</label>
+        <input class="uk-input uk-text-center" formControlName="email" type="text" placeholder="" />
+        <label class="text-danger validate-text"
+          *ngIf="userProfileForm.get('email').touched &&(userProfileForm.get('email').errors?.required ||userProfileForm.get('email').errors?.email || userProfileForm.get('email').errors?.pattern)">Ingrese
+          un correo válido</label>
+        <label>Numero de teléfono</label>
+        <br />
+        <label class="text-danger validate-text" *ngIf="userProfileForm.get('telefono').errors?.pattern">Ingrese un
+          número válido con el prefijo de país (Ej.
+          +0123456789)</label>
+        <input class="uk-input uk-text-center" formControlName="telefono" type="text" placeholder="" />
+
+        <label>Fecha de nacimiento</label>
+        <br />
+
+        <!-- <input type="date" formControlName="fechaNacimiento"
+          style="width: 100%; border:solid 1px #ebeff1 !important; padding: 10px; font-size: 14px; color: #66615b !important;" /> -->
+
+        <div class="uk-inline" style="width: 100% !important;">
+
+          <p-calendar [inputStyle]="{'width': '90%'}" dateFormat="dd-mm-yy" formControlName="fechaNacimiento"
+            [monthNavigator]="true" [yearNavigator]="true" yearRange="1970:2023" [showIcon]="true"></p-calendar>
+        </div>
+
+
+        <label>Género</label>
+        <br>
+        <p-dropdown [options]="sexos" formControlName="sexo"></p-dropdown>
+      </dl>
+
+
+
+    </form>
+  </div>
+
+  <div class="card-footer">
+
+    <div class="button-container">
+      <a class="uk-button uk-button-primary dat-button-tertiary" style="margin-right:10px"
+        (click)="backClicked()">Cancelar</a>
+      <button type="submit" class="btn btn-primary btn-round uk-button" [disabled]="userProfileForm.invalid"
+        form="editUserProfileForm">
+        Actualizar
+      </button>
+    </div>
+  </div>
+</div>

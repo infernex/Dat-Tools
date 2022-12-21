@@ -1,0 +1,457 @@
+<div *ngIf="loading" style="height: 500px;" class="dat-welcome">
+
+    <app-loading></app-loading>
+</div>
+
+<ng-container [ngSwitch]="popSel">
+    <!--NUESTRA EMPRESA-->
+    <div class="dat-animated" [hidden]="loading">
+        <section *ngSwitchCase="1" class="container-fluid " style="margin-left:0;margin-right:0; padding: 0px;">
+
+            <div class="uk-child-width-1-1@m " uk-grid
+                style=" margin-top: 0px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0px !important;">
+                <div style="padding: 0px !important;">
+                    <div class="uk-card " style="padding: 0px;">
+                        <div class="uk-card-media-top">
+                            <!-- <div *ngFor="let file of urlVideo " class="diagramapop" [innerHTML]="getVideoTag(file)"></div> -->
+                            <!-- <video src="https://res.cloudinary.com/djokqylda/video/upload/v1587655239/Dat-Analytics/Web.Dat-Analytics/Videos/dat_about_e0duer.mp4" loop muted playsinline uk-video="autoplay: inview"></video> -->
+                        </div>
+                        <div class="uk-card-body dat-card-pop">
+                            <h2 class="uk-modal-title">Nuestra empresa</h2>
+                            <p style="text-align:start; color: #626262" class="animated fadeIn delay-content">
+                                Dat-Analytics es una empresa de servicios de consultoría en <strong>Analítica de datos y
+                                    desarrollo de aplicaciones software de inteligencia de Negocios.</strong>
+                                <br><br>
+                                Somos un equipo multidisciplinario con más de 12 de años de experiencia, nuestras bases
+                                y
+                                legado se enfocan en el análisis de datos, inteligencia de negocios, análisis financiero
+                                y
+                                económico, desarrollo de software, estrategias, planificación de proyectos e innovación
+                                tecnológica.
+                                <br><br>
+                                Creemos firmemente en que la información es uno de los activos más valiosos que una
+                                empresa
+                                posee y que sólo a través de ésta se pueden tomar las decisiones oportunas e
+                                inteligentes
+                                para ser competitivos y efectivos en el mercado.
+                                <br><br>
+                                Estamos comprometidos con la investigación y el desarrollo de servicios innovadores a
+                                problemas reales, entregando las herramientas y el soporte necesario para apoyar la toma
+                                de
+                                decisiones de nuestros clientes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!--Mision y Vision-->
+            <div id="mi-vi" class="container-mi-vi  uk-card-body dat-card-pop">
+                <div
+                    style="margin-bottom:50px; margin-top: 0px; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                    <div class="uk-child-width-1-2@m " uk-grid>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://res.cloudinary.com/djokqylda/image/upload/v1587653827/Dat-Analytics/Web.Dat-Analytics/Popups/1_kykj5s.jpg"
+                                        alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title titulo3">Misión</h3>
+                                    <p>Brindar a nuestros clientes nuestra experiencia en Analítica de Datos a través de
+                                        un
+                                        servicio de excelencia, enfocado en la obtención de resultados de la más alta
+                                        calidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title titulo3">Visión</h3>
+                                    <p>Ser un referente por excelencia en el campo del análisis y visualización de
+                                        datos,
+                                        sustentado por la pasión en el trabajo, la innovación continua y la búsqueda de
+                                        ser
+                                        mejores día tras día.</p>
+                                </div>
+                                <div class="uk-card-media-bottom">
+                                    <img src="https://res.cloudinary.com/djokqylda/image/upload/v1587654686/Dat-Analytics/Web.Dat-Analytics/Popups/DatTeam2_j24tcy.jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!--NUESTRO EQUIPO-->
+    <div class="dat-animated" [hidden]="loading">
+        <section *ngSwitchCase="2" class="container-fluid" style="margin-left:0;margin-right:0; margin-top: 20px; padding: 0px;">
+
+            <div class="uk-card  uk-grid-collapse uk-child-width-1-2@s uk-margin cardPop" uk-grid [hidden]="loading">
+                <div class="uk-flex-last@s uk-card-media-right uk-cover-container animated fadeIn delay-gallery">
+                    <img class="imgCard-top"
+                        src="https://res.cloudinary.com/djokqylda/image/upload/v1587654753/Dat-Analytics/Web.Dat-Analytics/Popups/equipo_rehb9n.jpg"
+                        alt="" uk-cover>
+                    <canvas class="" width="600" height="400"></canvas>
+                </div>
+                <div>
+                    <div class="uk-card-body dat-card-pop">
+                        <h2 class="uk-modal-title">Nuestro equipo</h2>
+                        <p class="animated fadeIn delay-content paragraphPop">
+                            <strong>Dat-Analytics</strong> está formado por un talentoso equipo de profesionales
+                            enfocados
+                            en dar solución a problemáticas de negocio en diversas áreas, siempre dispuestos a encarar
+                            nuevos desafíos y acompañar a nuestros clientes en el proceso.
+                            <br><br>
+                            Promovemos la eficiencia en nuestro trabajo diario, garantizando un alto grado de
+                            rentabilidad y
+                            satisfacción para todos nuestros clientes y aliados, nuestro pilar fundamental es la
+                            <strong>innovación y disrupción de los procesos.</strong>
+                        </p>
+
+                        <!-- <div style="height:50vh;min-height:100%;min-width:100%;width:auto; position:relative;margin:0;overflow:hidden;">
+                                        <div class="text-center" style="   position:absolute;width:100%;height:100%; ">
+                                          <div class="selector">
+                                            <ul>
+                                              <li>
+                                                <input id='c1' type='checkbox'>
+                                                <label for='c1' class="especialidadLabel">Finanzas</label>
+                                              </li>
+                                              <li>
+                                                <input id='c2' type='checkbox'>
+                                                <label for='c2' class="especialidadLabel">Economía</label>
+                                              </li>
+                                              <li>
+                                                <input id='c3' type='checkbox'>
+                                                <label for='c3' class="especialidadLabel">Contabilidad</label>
+                                              </li>
+                                              <li>
+                                                <input id='c4' type='checkbox'>
+                                                <label for='c4' class="especialidadLabel">Negocios</label>
+                                              </li>
+                                              <li>
+                                                <input id='c5' type='checkbox'>
+                                                <label for='c5' class="especialidadLabel">Internet</label>
+                                              </li>
+                                              <li>
+                                                <input id='c6' type='checkbox'>
+                                                <label for='c6' class="especialidadLabel">Software</label>
+                                              </li>
+                                              <li>
+                                                <input id='c7' type='checkbox'>
+                                                <label for='c7' class="especialidadLabel">Tecnología</label>
+                                              </li>
+                                            </ul>
+                                            <button>Dat-Analytics</button>
+                                          </div>
+                                        </div>
+                                      </div> -->
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!--NUESTRA TECNOLOGIA-->
+    <div class="dat-animated" [hidden]="loading">
+        <section *ngSwitchCase="3" class="container-fluid" style="margin-left:0;margin-right:0; padding: 0px;">
+            <div class="uk-card uk-card-body uk-width-1-1@m cardTech  dat-card-pop" [hidden]="loading">
+
+                <div class="contenedortech">
+                    <div class="row">
+                        <div class="container-fluid">
+                            <h4 class="headerGroup  tecnologia2 animated fadeInDown paragraphPop"> Visualización y
+                                Estadística</h4>
+                        </div>
+                        <div *ngFor="let v of grupo1"
+                            class="col-xs-12 col-sm-3 col-md-2 col-lg-2 text-center tecnologia animated fadeInLeft">
+                            <div class="logoContainer">
+                                <img src="{{ v.Logo }}" alt="{{ v.Nombre }}" class="img-fluid logoTools" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="container-fluid">
+                            <h4 class="headerGroup tecnologia2 animated fadeInDown paragraphPop">Data Science</h4>
+                        </div>
+                        <div *ngFor="let v of grupo2"
+                            class="col-xs-12 col-sm-3 col-md-2 col-lg-2 text-center tecnologia animated fadeInLeft">
+                            <div class="logoContainer">
+                                <img src="{{ v.Logo }}" alt="{{ v.Nombre }}" class="img-fluid logoTools" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="row" style="margin-bottom:15px;">
+                        <div class="container-fluid">
+                            <h4 class="headerGroup tecnologia2 animated fadeInDown paragraphPop">Arquitecturas de datos
+                            </h4>
+                        </div>
+                        <div *ngFor="let v of grupo3"
+                            class="col-xs-12 col-sm-3 col-md-2 col-lg-2 text-center tecnologia animated fadeInLeft">
+                            <div class="logoContainer">
+                                <img src="{{ v.Logo }}" alt="{{ v.Nombre }}" class="img-fluid logoTools" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+
+    <!--CONTACTO-->
+    <div class="dat-animated" [hidden]="loading">
+        <section *ngSwitchCase="4" class="container-fluid body-page"
+            style="margin-left:0;margin-right:0; margin-top: 20px; padding: 0px;">
+
+
+            <div class="uk-text-center" [hidden]="loading">
+                <div class="uk-card card-contact" style="">
+
+                    <div class=" uk-grid-collapse uk-child-width-1-2@s uk-margin " uk-grid>
+                        <div
+                            class="uk-flex-last@s uk-card-media-right uk-cover-container animated fadeIn delay-gallery">
+                            <img src="https://res.cloudinary.com/djokqylda/image/upload/v1587654539/Dat-Analytics/Web.Dat-Analytics/Popups/contact_pvldhw.jpg"
+                                alt="" uk-cover>
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <div class="animated fadeIn delay-gallery">
+                            <div class="uk-card-body">
+                                <div>
+                                    <h2 class="uk-text-left">Dat-Analytics S.A</h2>
+
+                                </div>
+                                <div class="uk-text-left">
+                                    <p style=" font-size: 30px"><span style="color: #9faebe">+505</span> 8880 8097</p>
+
+                                    <p style="color: #9faebe">Email: </p>
+                                    <p> <a style="color:#1e87f0; text-decoration: none;"
+                                            href="mailto:info@dat-analytics.com?Subject=Consulta">info@dat-analytics.com</a>
+                                    </p>
+                                    <p style="color: #9faebe">Direccion: </p>
+                                    <p>Managua, Nicaragua</p>
+
+                                </div>
+                                <div>
+                                    <div class="uk-text-left">Villa Fontana, <br> Del Club Terraza 1 Cuadra Al Lago, Edificio Orange, Mano Izquierda Esquinero
+                                        <br>
+                                        <br>
+                                        <a class="uk-text-left" style="color:#1e87f0;" uk-icon="twitter"></a>
+                                        <a class="uk-text-left" style="color:#1e87f0;" target="_blank"
+                                            href="https://www.linkedin.com/company/dat-analytics?trk=public_profile_experience-item_result-card_subtitle-click"
+                                            uk-icon="linkedin"></a>
+                                    </div>
+
+                                    <!-- <p class="uk-text-left"> <a style="color:#1e87f0; text-decoration: none;" href="mailto:info@dat-analytics.com?Subject=Consulta">Ver en mapa</a></p> -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+
+ <!-- VISUALIZACION Y TABLEROS DE COMANDOS -->
+    <div class=" dat-animated" [hidden]="loading">
+            <section *ngSwitchCase="5" class="container-fluid" style="margin-left:0;margin-right:0; margin-top: 20px; padding: 0px;">
+                    <div class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin cardPop" uk-grid >
+                        <div class="uk-flex-last@s uk-card-media-right uk-cover-container animated fadeIn delay-gallery">
+                            <img  src="https://res.cloudinary.com/djokqylda/image/upload/v1587653827/Dat-Analytics/Web.Dat-Analytics/Popups/1_kykj5s.jpg" alt="" uk-cover>
+                            <canvas class="" width="600" height="400"></canvas>
+                        </div>
+                        <div>
+                            <div class="uk-card-body dat-card-pop">
+                                    <h2 class="uk-modal-title">Visualización y Tableros de Comando</h2>
+                                <!-- <h1 class="uk-article-title animated slideInDown delay-title"><p class="titulopop" >Visualización y Tableros de Comando</p></h1> -->
+                                <p class="animated fadeIn delay-content paragraphPop">Nos especializamos en el diseño e implementación de visualizaciones interactivas de datos de alto nivel, que brinden el valor agregado requerido para que nuestros clientes puedan tomar las mejores decisiones en su empresa.
+                                    <br><br>
+                                    Estamos seguros que un gráfico dice mucho más que 5000 líneas de datos, es por eso que nuestro principal objetivo es transformar la información en conocimiento visual y útil para el cliente.
+                                    <br><br>
+                                    Nuestra experiencia en el desarrollo de tableros de comandos, informes, Indicadores de rendimiento entre otros, nos permiten de igual manera orientar y asesorar a nuestros clientes para obtener los mejores resultados posibles, en cuanto al proceso de Visualización e Interpretación correcta de la Información, sea esta información de carácter operativo, de seguimiento, para análisis o el ámbito solicitado.
+                                    <br><br>
+                                    Como expertos en la materia, manejamos diferentes herramientas de visualización a fin de asegurar que el cliente pueda explotar al máximo cualquier inversión ya realizada y obtener los resultados esperados.
+                                  </p>
+                              </div>
+                        </div>
+                    </div>
+                  
+              </section>
+              
+    </div>
+
+<!--ANALITICAS AVANZADA DE DATOS-->
+    <div class="dat-animated" [hidden]="loading">
+
+            <section *ngSwitchCase="6" class="container-fluid" style="margin-left:0;margin-right:0; margin-top:20px; padding: 0px;">
+
+                    <!--ANALITICA DE CLIENTES-->
+                    <div class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin cardPop" uk-grid>
+                        <div class="uk-flex-last@s uk-card-media-right uk-cover-container animated fadeIn delay-gallery">
+                            <img class="imgCard-top" src="https://res.cloudinary.com/djokqylda/image/upload/v1587654055/Dat-Analytics/Web.Dat-Analytics/Popups/clientes_tygkvw.jpg" alt="" uk-cover>
+                            <canvas class="" width="600" height="400"></canvas>
+                        </div>
+                        <div>
+                            <div class="uk-card-body  dat-card-pop">
+                                    <h2 class="uk-modal-title">Analítica de Clientes</h2>
+                                
+                                <p class="animated fadeIn delay-content paragraphPop">Proveemos a nuestros Clientes un Modelo de análisis 360, el cual permite conocer a sus clientes de manera integral, facilitando la identificación de comportamientos específicos,  que brinden perspectivas inteligentes para el diseño de estrategias de Negocios orientadas a: 
+                                    <br> <br>
+                                    <li> &nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas"></i> &nbsp; Campañas de Rentabilización de Clientes.</li>
+                                    <li> &nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas"></i> &nbsp; Campañas de Retención de Clientes.</li>
+                                    <li> &nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas"></i> &nbsp; Optimización y Mejora de Productos.</li>
+                                    <li> &nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas"></i> &nbsp; Campañas de Venta Cruzada.</li>
+                                    <li> &nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas"></i> &nbsp; Fidelización del Cliente.</li>
+                                    <li> &nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas"></i> &nbsp; Red de contactos del Cliente.</li>
+                                    <li> &nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas"></i> &nbsp; hábitos y consumo del Cliente.</li>
+                                    <li> &nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas"></i> &nbsp; Anticipación a acciones del Cliente.</li>
+                                    <li> &nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas"></i>&nbsp; Herramientas de alerta temprana que faciliten la gestión oportuna de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cara al servicio y generación de mayores y mejores negocios.</li>
+                                    <br>
+                                      Adaptamos nuestros modelos analíticos según los alcances de información que se posea con respecto al Cliente.
+                                    </p>
+                              </div>
+                        </div>
+                    </div>
+                  
+                  
+                    <!--ANALITICA OPERACIONAL-->
+                    <div class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin cardPop" uk-grid>
+                        <div class="uk-card-media-left uk-cover-container animated fadeIn delay-gallery">
+                            <img src="https://res.cloudinary.com/djokqylda/image/upload/v1587654159/Dat-Analytics/Web.Dat-Analytics/Popups/Operacional_wt99lv.jpg" alt="" uk-cover>
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <div>
+                            <div class="uk-card-body dat-card-pop">
+                                    <h2 class="uk-modal-title">Analítica de operacional</h2>
+                                <p class="animated fadeIn delay-content paragraphPop">
+                                    Dat-Analytics le apoyará directamente en la implementación de Análisis Predictivos de Ventas, Implementación de Mediciones e Indicadores de Nivel agregado que permitan anticiparse a los comportamientos y tendencias de su negocio.
+                                    <br><br>
+                                    Nuestros modelos son adaptables y aplicables independientemente del tamaño de su empresa.
+                                    <br><br>
+                                    El crecimiento de las ventas apoyados por análisis y prediccione de datos tendran un impacto significativo en sus resultados y rentabilidad empresarial.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                  
+                  
+                  
+                  
+                  <!--ANALTICICA DE VENTAS-->
+                  
+                   <div class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin cardPop" uk-grid>
+                      <div class="uk-flex-last@s uk-card-media-right uk-cover-container animated fadeIn delay-gallery">
+                          <img class="imgCard-top" src="https://res.cloudinary.com/djokqylda/image/upload/v1587654236/Dat-Analytics/Web.Dat-Analytics/Popups/ventas_cprh3r.jpg" alt="" uk-cover>
+                          <canvas class="" width="600" height="400"></canvas>
+                      </div>
+                      <div>
+                          <div class="uk-card-body dat-card-pop">
+                                <h2 class="uk-modal-title">Analítica de ventas</h2>
+                              <p class="animated fadeIn delay-content paragraphPop">
+                  
+                                  Dat-Analytics le apoyará directamente en la implementación de Análisis Predictivos de Ventas, Implementación de Mediciones e Indicadores de Nivel agregado que permitan anticiparse a los comportamientos y tendencias de su negocio.
+                                  <br><br>
+                                  Nuestros modelos son adaptables y aplicables independientemente del tamaño de su empresa.
+                                  <br><br>
+                                  El crecimiento de las ventas apoyados por análisis y prediccione de datos tendran un impacto significativo en sus resultados y rentabilidad empresarial.
+                                  </p>
+                            </div>
+                      </div>
+                  </div>
+                  
+                  
+                  
+                  
+                  
+                  <!--ANALITICA FINANCIERA-->
+                     <div class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin cardPop" uk-grid>
+                        <div class="uk-card-media-left uk-cover-container animated fadeIn delay-gallery">
+                            <img src="https://res.cloudinary.com/djokqylda/image/upload/v1587654319/Dat-Analytics/Web.Dat-Analytics/Popups/financiera_icg9gq.jpg" alt="" uk-cover>
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <div>
+                            <div class="uk-card-body dat-card-pop">
+                                    <h2 class="uk-modal-title">Analítica de financiera</h2>
+                                <p class="animated fadeIn delay-content paragraphPop" >
+                                    El control efectivo de sus finanzas empresariales es una de las claves para el éxito y perspectivas futuras de su negocio, en Dat-Analytics contamos con un set completo de modelos, herramientas e indicadores que de manera efectiva pueden 
+                                    apoyarlo en la toma efectiva de decisiones de cara a ser más eficientes y rentables en el mercado.
+                                    <br><br>
+                                    Nuestro asesoramiento financiero y la implementación de analítica avanzada de sus finanzas daran un valor agregado de gran impacto a sus metas y objetivos estratégicos del Negocio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </section>
+    </div>
+
+  <!-- PLATAFORMA DE ANALÍTICA DE NEGOCIOS A LA MEDIDA -->
+  <div class="dat-animated" [hidden]="loading">
+        <section *ngSwitchCase="7" class="container-fluid" style="margin-left:0;margin-right:0; margin-top: 20px; padding: 0px;">
+
+                <div class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin cardPop" uk-grid>
+                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container animated fadeIn delay-gallery">
+                        <img class="imgCard-top" src="https://res.cloudinary.com/djokqylda/image/upload/v1587654440/Dat-Analytics/Web.Dat-Analytics/Popups/negocios_huq0hd.jpg" alt="" uk-cover>
+                        <canvas class="" width="600" height="400"></canvas>
+                    </div>
+                    <div>
+                        <div class="uk-card-body dat-card-pop">
+                                <h2 class="uk-modal-title">Plataformas de Analítica de Negocios a la Medida</h2>
+                            
+                            <p class="animated fadeIn delay-content paragraphPop">
+                                En Dat-Analytics le ofrecemos desarrollos a la medida de:
+                                <br><br>
+                                &nbsp;&nbsp; <i class="fas fa-chevron-right vinietas"></i> Software de Analítica de negocios a la medida que incluyen componentes como:
+                                <br><br>
+                                  <li> &nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas2"></i> &nbsp; Integración de Datos parametrizada y calendarizada</li>
+                                  <li>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas2"></i> &nbsp; Motores de Calculos de Indicadores</li>
+                                  <li>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas2"></i> &nbsp; Motores de Reportería de Análisis</li>
+                                  <li>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas2"></i> &nbsp; Dashboards y Visualizacion Analitica incrustrada</li>
+                                  <li>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas2"></i> &nbsp; Motores de Alertas y notificaciones email</li>
+                                  <li>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas2"></i> &nbsp; Administración y Gestión de Catálogos Independientes</li>
+                                  <li>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas2"></i> &nbsp; Sincronización con Información Web</li>
+                                  <li>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas2"></i> &nbsp; Intefaces Personalizadas acordes a la Imagen empresarial</li>
+                                  <li>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas2"></i> &nbsp; Integración con Plataformas de Inteligencia de Negocios &nbsp; &nbsp; &nbsp;(Tableau, PowerBI etc)</li>
+                                  <li>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas2"></i> &nbsp; Control de Campañas Estratégicas de Negocio</li>
+                                  <li>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-chevron-right vinietas2"></i> &nbsp; Motores de Procesamiento Analítico con R y Python.</li>
+                                <br>
+                                &nbsp;&nbsp; <i class="fas fa-chevron-right vinietas"></i> Herramientas de Web Scrapping o barrido de datos de la Web. Si usted quiere sincronizar sus datos de su Red Social con su analítica de empresa, nosotros lo hacemos posible.    
+                                <br><br>
+                                &nbsp;&nbsp; <i class="fas fa-chevron-right vinietas"></i> Plataformas de Service Desk a la medida que permitan organizar de manera efectiva su flujo de trabajo y asegurar su planificación y debida actividad de sus colaboradores.
+                                <br><br>
+                                <span style=" font-weight: normal !important;  font-style: oblique"> Nuestro desarrollo de software esta basado en el uso y aplicación de las mejores prácticas y tecnologías seguras y confiables para su entorno.</span>
+                            </p>
+                          </div>
+                    </div>
+                </div>
+              
+              
+              
+              
+              
+              
+              </section>
+  </div>   
+</ng-container>

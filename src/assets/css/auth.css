@@ -1,0 +1,127 @@
+input.form-control,input.form-control:focus{
+  background-color: #fff;
+  color: #636b7b;
+  border: 1px solid #fff;
+  
+  }
+
+  select.form-control,input.form-control:focus{
+    background-color: #fff;
+    color: #636b7b;
+    border: 1px solid #fff;
+  
+  }
+
+  input.form-control:focus{
+    /*box-shadow: none;*/
+  }
+  
+  button[type=submit].btn{
+    border-radius: 20px;
+    background-color: #22a2f2;
+    color: #fff;
+   
+    
+  }
+
+div.form-group label:not(.text-danger){
+    color: #545d6a;
+    font-weight: 700;
+    
+}
+
+div.form-group.required>label:first-child:after{
+    content:'*';
+    color: #545d6a;
+    padding-left: 10px;
+}
+
+
+#toast-container > div {
+    opacity:1;
+}
+
+.wrapper {
+    display: flex;
+   
+    flex-direction: column; 
+   
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+  /* border-radius: 2em; */
+  
+   
+  }
+
+  
+
+  .wrapped-div {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #2e3137;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+
+    background-color: #ffffff;
+    
+
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+
+  }
+
+
+
+
+  /* Tabs */
+.tab-header{
+    text-align: center;
+}
+
+  .tab-header h2.active {
+    color: #545d6a;
+    border-bottom: 2px solid #545d6a;
+    font-weight: normal;
+  }
+
+  .tab-header h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    display:inline-block;
+    padding: 30px 40px 10px 40px;
+    cursor: pointer;
+    color: #545d6a6c;
+    border-bottom: 2px solid #545d6a6c;
+    font-weight: normal;
+  }
+
+  .tab-header h2:focus {
+      outline: none;
+  }
+
+  form{
+      margin: 0px 16px;
+      
+  }
+
+ div.form-group input.invalid{
+    border: 1px solid #dc3545; 
+ }
+ div.form-group label:first-child{
+    font-weight: normal;
+    font-size: 1.5rem; 
+   
+ }
+
+ .form-group{
+  text-align: left;
+ }

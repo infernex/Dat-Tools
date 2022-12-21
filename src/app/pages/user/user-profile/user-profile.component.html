@@ -1,0 +1,86 @@
+<div *ngIf="loading" class="dat-welcome" style="margin-top: 30px; ">
+  <app-loading></app-loading>
+</div>
+<div [hidden]="loading" class="dat-animated">
+<div class="card">
+  <div class="card-header">
+    <h5 class="title">Información general</h5>
+  </div>
+  <div class="card-body">
+    <div style=" max-width: 500px; margin-right: auto; margin-left: auto;">
+      <div class="row" style="margin-top: 40px;">
+        <div class="col-md-5">
+          <p style=" color: #999999; font-size: 12px;"> Nombre:</p>
+        </div>
+        <div class="col-md-7" style="">
+          <p style="color: #666666;">{{fullName}}</p>
+        </div>
+
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-md-5">
+          <p style=" color: #999999; font-size: 12px;"> Nombre de usuario:</p>
+        </div>
+        <div class="col-md-7">
+          <p style="color: #666666;"> @{{userName}}</p>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-md-5">
+          <p style=" color: #999999; font-size: 12px;"> Email:</p>
+        </div>
+        <div class="col-md-7">
+          <p style="color: #666666;"> {{email}}</p>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-md-5">
+          <p style=" color: #999999; font-size: 12px;"> Numero de teléfono:</p>
+        </div>
+        <div class="col-md-7">
+          <p style="color: #666666;"> {{telefono}}</p>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-md-5">
+          <p style=" color: #999999; font-size: 12px;"> Fecha de nacimiento:</p>
+        </div>
+        <div class="col-md-7">
+          <p style="color: #666666;"> {{fechaNacimiento | date:'mediumDate'}}</p>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-md-5">
+          <p style=" color: #999999; font-size: 12px;"> Género:</p>
+        </div>
+        <div class="col-md-7">
+          <p style="color: #666666;"> {{genero}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-container" style="text-align: start; margin-top:20px; padding: 15px; text-align: center;">
+
+    <button type="submit" class="btn btn-primary btn-round uk-button" [routerLink]="['/profile/edit-profile']">Editar
+      Perfil</button>
+    <br>
+    <br>
+    <a style="color: #1e87f0 !important; font-size: 14px;" [routerLink]="['/profile/change-pwd']"> Cambiar
+      contraseña</a>
+
+  </div>
+</div>
+</div>
+
+
+
+   
+
+
+
+
+
+
+

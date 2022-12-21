@@ -1,0 +1,51 @@
+import { Rol } from './rol.model';
+export class User {
+    id: string;
+    userName: string;
+    email: string;
+    fullName: string;
+    telefono: string;
+    referencia: string;
+    rangoEmpleados: string;
+    pais: string;
+    cedula: string;
+    area: string;
+    cargo: string;
+    sexo: string;
+    password: string;
+    confirmPassword: string;
+    newPassword: string;
+    description: string;
+    urlProfilePicture: string;
+    fechaNacimiento: Date;
+    publicIdCloudinary: string;
+    totalCourses: number;
+    check: boolean;
+    urlLinkedin: string;
+    urlTwitter: string;
+    roles: Rol[];
+    //roles: Rol[];
+    constructor() {
+        this.id = null;
+        this.userName = null;
+        this.email = null;
+        this.fullName = null;
+        this.telefono = null;
+        this.referencia = null;
+        this.rangoEmpleados = null;
+        this.pais = null;
+        this.cedula = null;
+        this.area = null;
+        this.cargo = null;
+        this.sexo = null;
+        this.password = null;
+        this.confirmPassword = null;
+        this.newPassword = null;
+        this.roles = [];
+        this.urlProfilePicture = "";
+        //this.fechaNacimiento=null;
+        this.description = "";
+        this.urlLinkedin = null;
+        this.urlTwitter = null;
+    }
+}

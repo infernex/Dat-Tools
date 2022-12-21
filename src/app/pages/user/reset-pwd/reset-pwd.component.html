@@ -1,0 +1,92 @@
+<p-dialog header=" " [modal]="true" appendTo="body" [(visible)]="display" [maximizable]="true"
+    [contentStyle]="{'overflow':'visible'}" [style]="{width: '430px'}">
+
+    <section class="body-page"
+        style="display: flex; justify-content: center; align-items: center; margin-top: 10px; margin-bottom: 10px;">
+
+        <div class=" card card-dat card-body" style="box-shadow: none;">
+            <div style="margin-bottom: 20px;">
+                <a href=""><img class="uk-border-rounded" src="{{logoTraining}}" width="70" height="70"></a>
+                <div *ngIf="isLoading" style="margin-left: 5px; float: right;" class="uk-margin-right"
+                    uk-spinner="ratio: 0.5"></div>
+            </div>
+
+            <h3 class="uk-card-title" style="margin:none">Reestablecer contraseña</h3>
+            <p style="color: #666666;">Ingrese su nombre de usuario y dirección de correo que utilizó al registrarse en
+                Dat-Training.
+                <br> <br> Le enviaremos un correo con la nueva contraseña.</p>
+            <!-- </div> -->
+
+            <form id="editUserForm" [formGroup]="userForm" (ngSubmit)=resetPwd()>
+
+                <!--nombre de usuario-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class=form-group>
+                            <label>Nombre de Usuario</label>
+                            <input formControlName="userName" class="form-control form-control-sm input-secondary"
+                                type="text" placeholder="Nombre de Usuario">
+                        </div>
+                    </div>
+                </div>
+
+                <!--correo-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class=form-group>
+                            <label>Correo</label>
+                            <input formControlName="email" class="form-control form-control-sm input-secondary"
+                                type="text" placeholder="Correo electronico">
+                            <label class="text-danger validate-text"
+                                *ngIf="userForm.get('email').touched && (userForm.get('email').errors?.required || userForm.get('email').errors?.email || userForm.get('email').errors?.pattern)">Ingrese
+                                un correo válido</label>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--toos-->
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-md-12">
+                        <div class="pull-right">
+                            <button pButton type="button" label="Cerrar" icon="pi pi-times-circle"
+                                class="p-button-secondary p-button-raised p-button-rounded"
+                                (click)="closeDialog()"></button>
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                            <button pButton type="submit" label="Enviar" icon="pi pi-plus-circle"
+                                class="uk-button-primary p-button-raised p-button-rounded" [disabled]="userForm.invalid"
+                                form="editUserForm"></button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- full name
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class=form-group>
+                            <label>Nombre Completo</label>          
+                            <input formControlName="fullName" class="form-control form-control-sm" type="text" placeholder="Nombre Completo">
+                        </div>
+                    </div>
+                </div> -->
+
+                <!--erros-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-warning" role="alert" *ngIf="errors.length> 0">
+                            <ul>
+                                <li *ngFor="let error of errors">
+                                    {{error}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+    </section>
+
+</p-dialog>

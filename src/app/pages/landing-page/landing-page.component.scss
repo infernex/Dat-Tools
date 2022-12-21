@@ -1,0 +1,26 @@
+.dat-icon-main{
+    height: 200px;
+    width: 200px;
+    // padding: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dat-content-icon-main{
+    display: flex; justify-content: center; align-items: center; flex-direction: column;
+}
+
+.dat-content-icon-tittle{
+    color: #ffffff; font-weight: bold; margin-top: 5px; text-align: center; text-transform: none; font-size: 15px;
+}
+
+.dat-content-icon-description{
+    color: #ffffff; padding: 15px; text-align: center;
+}
+
+
+
+
+

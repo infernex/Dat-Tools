@@ -1,0 +1,81 @@
+<form id="editDashboardForm" [formGroup]="dashboardForm" (ngSubmit)=save()>
+
+    <!--codigo y nombre-->
+    <div class="row">
+        <div class="col-md-6">
+            <div class=form-group>
+                <label>Código</label>          
+                <input formControlName="codDashboard" class="form-control form-control-sm " type="text" placeholder="DASH-00">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class=form-group>
+                <label>Nombre</label>          
+                <input formControlName="nombre" class="form-control form-control-sm " type="text" placeholder="">
+            </div>
+        </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class=form-group>
+            <label>Categoria</label>    
+            
+            <p-dropdown [options]="categoriasDashboards" formControlName="fkDashboardCategoryId" ></p-dropdown>      
+            <!-- <input formControlName="fkDashboardCategoryId" class="form-control form-control-sm " type="text" placeholder=""> -->
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class=form-group>
+            <label>Tipo de dashboard</label>          
+            <input formControlName="dashboardTypeName" class="form-control form-control-sm " type="text" placeholder="">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class=form-group>
+            <label>URL</label>          
+            <input formControlName="url" class="form-control form-control-sm " type="text" placeholder="">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class=form-group>
+            <label>URL Imagen</label>          
+            <input formControlName="urlImage" class="form-control form-control-sm " type="text" placeholder="">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class=form-group>
+            <label>Descripcion</label>  
+            <textarea formControlName="descripcion" class="form-control form-control-sm dat-textarea" rows="3"></textarea>        
+            <!-- <input formControlName="descripcion" class="form-control form-control-sm " type="text" placeholder=""> -->
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class=form-group>
+            <label>Fuentes</label>          
+            <input formControlName="fuentes" class="form-control form-control-sm " type="text" placeholder="">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class=form-group>
+            <label>Tipo de Acceso</label>  
+            <br>        
+            <!-- <input formControlName="fkItemTYpe" class="form-control form-control-sm " type="text" placeholder=""> -->
+            <p-dropdown [options]="tipoAcceso" [(ngModel)]="selectItemAccess" ></p-dropdown>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class=form-group>
+            <label>Periocidad</label>          
+            <input formControlName="periocidad" class="form-control form-control-sm " type="text" placeholder="">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class=form-group>
+            <label>Notas metodologicas</label>          
+            <input formControlName="notasMetod" class="form-control form-control-sm " type="text" placeholder="">
+        </div>
+    </div>
+    
+</div>
+
+</form>

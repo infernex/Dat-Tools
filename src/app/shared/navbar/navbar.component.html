@@ -1,0 +1,281 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent"
+  style="background: #F9FBFC !important;"> -->
+<nav id=navbar2 class=" navbar2 navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent " style=" z-index: 1031; background: #ffffff !important; display: block !important; position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important; box-shadow: 0 1px 4px rgb(146 161 176 / 15%); margin-bottom: 0px; ">
+
+  <div class="container-fluid dat-navbar-movil ">
+    <div class="navbar-wrapper">
+      <div class="navbar-toggle">
+        <button *ngIf="showstoggleButton" type="button" class="navbar-toggler" (click)="sidebarToggle()">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+
+      <a *ngIf="showstoggleButton" (click)="sidebarDatToggle()" class="uk-icon-link uk-margin-small-right dat-toggle"
+        uk-icon="icon: menu; ratio: 1.5" style="color: #66615B;"></a>
+
+      <div class="dat-container-logo-live">
+        <div class="dat-logo-nav" *ngIf="!showstoggleButton">
+          <!-- <a href=""> <img width="100" height="100" src="assets/img/logos/logooficial.png"></a> -->
+          <!-- https://res.cloudinary.com/djokqylda/image/upload/v1612387582/Dat-Training/Imagenes%20Demo/icons/LOGOS_DATAS_SIN_FONDO-03_o5ztqa.png  -->
+
+          <a href="" style="margin-top: 10px !important; margin-right: 0px;"> <img width="100" height="100"
+              src="{{logoTraining}}"></a>
+        </div>
+
+        <div *ngIf="showLiveButton" class="dat-live-option">
+          <div class="toolbar">
+
+            <a [routerLink]="['/live']" class="btn btn_live" style="margin-right: 0px;">
+              <div style="display: flex;">
+                <div class="pulse red live"></div>
+
+                <div>
+                  <p style="line-height: 0px; "> <span style="color: #ffffff; font-weight: bold; font-size: 10px;"> En
+                      vivo</span> </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="detail-option-dat-class">
+            <p style="font-size: 11px; font-weight: bold; line-height:0px; color: #ffffff;"> Dat-Class</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="display: flex;">
+
+      <div style="display: flex; flex-direction: column;">
+        <button *ngIf="!isLogin"
+          class="uk-button uk-button-main uk-button-primary uk-button-tertiary dat-button-session"
+          [routerLink]="'/login'"> Iniciar
+          sesión</button>
+        <button *ngIf="!isLogin" class="uk-button uk-button-main uk-button-primary dat-button-session"
+          [routerLink]="'/registration'"> Crear cuenta gratuita</button>
+      </div>
+
+
+      <button class="navbar-toggler" type="button" (click)="collapse()" [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample">
+
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+      </button>
+    </div>
+
+
+
+    <div class="collapse navbar-collapse justify-content-end" id="collapseExample" [ngbCollapse]="isCollapsed"
+      style="z-index:10000 !important;">
+
+      <div style="display: flex; flex-direction: column;">
+        <button *ngIf="!isLogin"
+          class="uk-button uk-button-main uk-button-primary uk-button-tertiary dat-button-session-3"
+          [routerLink]="'/login'"> Iniciar
+          sesión</button>
+        <button *ngIf="!isLogin" class="uk-button uk-button-main uk-button-primary dat-button-session-3"
+          [routerLink]="'/registration'"> Crear cuenta gratuita</button>
+      </div>
+
+      <ul class="navbar-nav">
+        <a [routerLink]="'/dashboard'" class=" opcion-navbar-main nav-link">
+          Dashboards</a>
+        <a (click)="gotToListPost()" class=" opcion-navbar-main nav-link">
+          Blog</a>
+
+        <a href="https://www.dat-analytics.com/" class=" opcion-navbar-main nav-link">
+          Dat-Analytics</a>
+        <!-- <a href="#" class="dropdown-toggle opcion-navbar-main nav-link btn-magnify" data-toggle="dropdown"
+          id=trainning-nav>
+          Dat-Training
+        </a> -->
+
+        <a class="opcion-navbar-main nav-link" style="color: #071757;" href="https://training.dat-analytics.com/#/"
+          target="_blank"><img _ngcontent-c2="" alt=""
+            src="https://res.cloudinary.com/djokqylda/image/upload/v1640275683/Dat-Training/Imagenes%20Demo/icons/LOGOS_DATAS_SIN_FONDO-03_qvfdf7_1_gcax7t.png"
+            style="margin-right: 5px;" width="20px"> Dat-Training</a>
+
+        <!-- dropdown de dat trinning -->
+        <!-- <a class="uk-text-uppercase opcion-navbar" href="https://training.dat-analytics.com/#/" target="_blank"
+          style="font-size: 16px;"> Dat-Training </a> -->
+
+        <!-- <ul class="uk-nav uk-dropdown-nav  " uk-dropdown="pos: bottom-center;" class="navColor">
+
+          <div class="uk-width-large subnav-dat-training">
+            <div class="row">
+              <div class="col-md-6"> -->
+        <!--LISTADO CURSOS-->
+        <!-- <div style="min-height: 0px;">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li (click)="notificationCourses()" class="uk-active uk-nav-header"><a [routerLink]="['/courses']"
+                        style="font-weight: bold !important; color: #1e87f0;">Cursos ({{totalCourses}})</a></li>
+                    <li class="uk-nav-divider"></li> -->
+        <!-- <li style="padding-left: 25px;" *ngFor="let item of courses | slice:0:5"><a class="navbarShadow"
+                        [routerLink]="['/course', item.courseId]"> {{item.name}} </a></li> -->
+        <!-- 
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-md-6"> -->
+        <!--LISTADO CARRERAS-->
+        <!-- <div style="min-height: 0px;">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li (click)="notificationCareers()" class="uk-active uk-nav-header"><a [routerLink]="['/careers']"
+                        style="font-weight: bold !important; color: #1e87f0;">Carreras ({{totalCareers}})</a></li>
+                    <li class="uk-nav-divider"></li> -->
+        <!-- <li style="padding-left: 25px;" *ngFor="let item of careers | slice:0:5"> <a class="navbarShadow"
+                        [routerLink]="['/career', item.careerId]"> {{item.name}} </a></li> -->
+
+        <!-- </ul>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-sm-12 col-md-12 col-lg-4"> -->
+        <!--LISTADO CURSOS-->
+        <!-- <div style="min-height: 0px;">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li class="uk-active uk-nav-header"><a href="#"
+                    style="font-weight: bold !important; color: #1e87f0;">Editores</a></li>
+                <li class="uk-nav-divider"></li>
+                <li style="padding-left: 25px;"><a class="navbarShadow" [routerLink]="['/EditorBuilder','SQL','1']"> SQL
+                  </a></li> -->
+        <!-- <li style="padding-left: 25px;"><a class="navbarShadow" [routerLink]="['/EditorBuilder','R','1']"> R </a>
+                </li> -->
+        <!-- 
+              </ul>
+            </div>
+          </div>
+
+
+
+
+        </ul> -->
+
+
+
+        <li *ngIf="isLogin" class="nav-item btn-rotate" ngbDropdown placement="bottom-left">
+          <div class="uk-inline">
+            <a class="nav-link" ngbDropdownToggle id="navbarDropdownMenuLink">
+              <!-- <i class="nc-icon nc-single-02"></i> -->
+              <img class="uk-border-pill" src="{{urlprofilepicture}}" width="28" height="28"
+                style="max-height: 28px !important;">
+              <p>
+                <span class="d-lg-none d-md-block">Perfil</span>
+              </p>
+            </a>
+
+
+            <!-- Despliegue de opcines del navbar -->
+            <div uk-dropdown>
+              <ul class="uk-nav uk-dropdown-nav">
+                <!-- <li class="uk-nav-header" > <a >@ {{userName}}</a></li> -->
+                <!-- <li class="uk-nav-divider"></li> -->
+                <li><a [routerLink]="'/profile'"><span
+                      class="now-ui-icons users_single-02 uk-margin-small-right"></span>
+                    Mi
+                    perfil</a></li>
+
+                <!-- <li><a [routerLink]="'/profile/my-courses'"><span
+                      class="now-ui-icons education_agenda-bookmark uk-margin-small-right"></span> Mis cursos</a></li> -->
+                <li><a [routerLink]="'/chat'"><span class="now-ui-icons ui-1_email-85 uk-margin-small-right"></span>
+                    Mensajes</a></li>
+                <li><a [routerLink]="'/notifications'"><span
+                      class="now-ui-icons ui-1_bell-53 uk-margin-small-right"></span>
+                    Notificaciones</a></li>
+
+                <!-- <li><a [routerLink]="'/user-reportes'"  target="_blank" > <i class="uk-margin-small-right far fa-comment"></i> Enviar Comentarios</a></li> -->
+                <li><a (click)="showDialog()"> <i class="uk-margin-small-right far fa-comment"></i> Reportar un
+                    problema</a>
+                </li>
+
+
+                <li *ngIf="isAdminOrInstructor"><a [routerLink]="'/admin-course'"><span class="uk-margin-small-right"
+                      uk-icon="icon: cog; ratio: 0.8"></span> Administrar Dashboards</a></li>
+                <!-- <li><a [routerLink]="'/my-courses'"><span class="nc-icon nc-bell-55 uk-margin-small-right"></span> Notificaciones</a></li> -->
+                <li class="uk-nav-divider"></li>
+                <li><a (click)="logOut()"> <span class="uk-margin-small-right" uk-icon="icon: sign-out; ratio: 0.8"
+                      style="color: red;"></span> Cerrar
+                    sesion</a></li>
+              </ul>
+
+            </div>
+
+          </div>
+        </li>
+
+        <li class="dat-button-session-2" *ngIf="!isLogin" style=" margin-right: 5px;">
+          <button class="uk-button uk-button-main  uk-button-primary uk-button-tertiary" [routerLink]="'/login'"
+            style="margin-right: 10px;"> Iniciar
+            sesión</button>
+          <button class="uk-button uk-button-main uk-button-primary" [routerLink]="'/registration'"> Crear cuenta
+            gratuita</button>
+        </li>
+
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- Modal -->
+<!-- Los estilos de este Menu Modal estan en el CSS General. -->
+
+<p-dialog header="Reportar un problema" [(visible)]="display" [responsive]="true" [style]="{width: '55vw'}"
+  [contentStyle]="{minHeight:'30vw', padding:'5%'}" [maximizable]="true" blockScroll="true" [positionTop]="140"
+  [baseZIndex]="10000">
+
+  <div class="body-reports">
+
+
+    <div class="contenedor_Reportes">
+
+      <div class="reportes-header">
+
+        <p class="dat-message" style="border: 0px;">
+          <i class="fas fa-exclamation-triangle uk-margin-small-right"></i>
+          Puedes escribirnos cualquier problema que encuentre o sugerencia para una mejor experiencia en la plataforma.
+          ¡Ayudanos a mejorar!
+        </p>
+      </div>
+
+
+      <div class="body-text-area">
+        <textarea [(ngModel)]="texto" [placeholder]="placeholderText" autofocus="autofocus" class="tam-area"></textarea>
+      </div>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end frm-botones" style="margin-top: 15px;">
+
+        <div class="boton-eliminar btn-1">
+          <button pButton type="button" label="Cancelar" icon="pi pi-minus-circle"
+            class="p-button-danger p-button-raised p-button-rounded" (click)="cancelar()"></button>
+        </div>
+
+
+
+        <div class="boton-eliminar">
+          <button pButton type="button" label="Enviar" icon="pi pi-check"
+            class="p-button-success p-button-raised p-button-rounded" (click)="save()"></button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</p-dialog>

@@ -1,0 +1,89 @@
+<div *ngIf="loading" style="height: 100vh; background: #ffffff;" class="dat-welcome">
+
+    <app-loading></app-loading>
+</div>
+
+<div>
+
+    <navbar-cmp [pageIn]="page"></navbar-cmp>
+    <!-- <app-ad> </app-ad> -->
+    <!-- <app-ad > </app-ad> -->
+    <!-- <app-portafolio (idMenu)="UpdateMnSel($event)"></app-portafolio> -->
+    <section [hidden]="loading" class="dat-animated dat-main-home" style="height: 100% !important;">
+
+        <!-- <router-outlet (activate)="onActivate($event)"></router-outlet> -->
+        <!-- <router-outlet (idMenu)=" UpdateMnSel($event)"></router-outlet> -->
+        <router-outlet></router-outlet>
+
+        <!-- <footer-cmp></footer-cmp> -->
+
+        <ng-container *ngIf="mnSel>0">
+            <app-visor-info [mnSel]="mnSel" (clVis)="cerrarVisor($event)"></app-visor-info>
+        </ng-container>
+    </section>
+
+
+    <footer-cmp></footer-cmp>
+</div>
+
+
+
+
+
+<!-- <nav class="uk-navbar-container dat-navbar" uk-navbar>
+
+    <div class="uk-navbar-left">
+
+        <ul class="uk-navbar-nav">
+            <div style="margin-top: 5px; margin-left: 15px;">
+                <a href=""> <img width="100" height="100" src="assets/img/logos/logooficial.png"></a>
+            </div>
+        </ul>
+    </div>
+
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+                <li class="nav-item" >
+                        <a [routerLink]="'/'" class="nav-link btn-magnify">
+                           Dat-Training
+                        </a>
+                    </li>
+                <li class="nav-item" style="margin-right: 15px;">
+                        <a [routerLink]="'/careers'" class="nav-link btn-magnify">
+                           Carreras
+                        </a>
+                    </li>
+            <li *ngIf="isLogin" class="nav-item btn-rotate" ngbDropdown placement="bottom-left"
+                style="margin-top: 16px; margin-right: 15px;">
+                <div class="uk-inline">
+                    <a class="nav-link" ngbDropdownToggle id="navbarDropdownMenuLink">
+                        <i class="fas fa-user-circle" style="font-size: 30px; color:#1E87F0"></i>
+                        <p>
+                            <span class="d-lg-none d-md-block"></span>
+                        </p>
+                    </a>
+
+                    <div uk-dropdown="pos: bottom-right">
+
+                        <ul class="uk-nav uk-dropdown-nav">
+                                <li class="uk-nav-divider"></li>
+                            <li><a [routerLink]="'/profile'"><span uk-icon="icon: user; ratio: 0.8"></span> Mi
+                                    perfil</a>
+                            </li>
+                            <li><a [routerLink]="'/my-courses'"><span class="nc-icon nc-book-bookmark"></span> Mis cursos</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a (click)="logOut()"> <span uk-icon="icon: sign-out; ratio: 0.8"
+                                        style="color: red;"></span> Cerrar sesion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
+            <li *ngIf="!isLogin" style="margin-top: 18px; margin-right: 15px;">
+                <button class="uk-button uk-button-primary" [routerLink]="'/login'"> Iniciar
+                    Sesion</button>
+            </li>
+        </ul>
+
+    </div>
+</nav> -->

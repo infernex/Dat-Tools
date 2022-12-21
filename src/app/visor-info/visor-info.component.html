@@ -1,0 +1,122 @@
+<div id="modal-container">
+  <div class="modal-background" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- HEADER POPUP-->
+        <div class="modal-header headerPOPUP body-page uk-card uk-card-default">
+          <div class="col-xs-5 col-sm-12 col-md-2 col-lg-2 text-center">
+            <!-- <picture>
+              <source type="image/webp" srcset="assets/img/logooficial.webp"/>
+              <img class="logo" src="assets/img/logooficial.png" style="display:none;"/>
+            </picture> -->
+            <img src="assets/img/logooficial.png" width="100">
+          </div>
+
+          <div class="col-xs-3 col-sm-11 col-md-8 col-lg-8 center">
+            <h3 class="titulo">{{ pageTitulo }}</h3>
+          </div>
+
+          <div class="col-xs-4 col-sm-11 col-md-2 col-lg-2 ">
+            <div class="pull-right">
+
+              <!-- <img src="assets/img/icons/close-icon-dark.png" width="20" height="20"> -->
+              <button style="font-size: 20px;" id="btnClose" type="button" class=""
+                style="background: none; border: none;"><img src="assets/img/icons/close-icon-dark.png" width="20"
+                  height="20"> </button>
+            </div>
+
+          </div>
+          <!-- <button style="font-size: 20px; " id="btnClose" type="button" class="btn btn-primary" data-dismiss="modal" (click)="cerrarVisor()">  &times; </button>        -->
+
+        </div>
+        <!-- BODY -->
+        <div class="modal-body body-page" style="padding:0 !important;">
+          <ng-container [ngSwitch]="mnSel">
+            <!-- NUESTRA EMPRESA -->
+            <!-- <ng-container *ngSwitchCase="1">
+              <app-nuestra-empresa (pageTitulo)="setTitulo($event)"></app-nuestra-empresa>
+            </ng-container> -->
+
+            <!-- EQUIPO DE TRABAJO -->
+            <!-- <ng-container *ngSwitchCase="2">
+              <app-equipo-dat (pageTitulo)="setTitulo($event)"></app-equipo-dat>
+            </ng-container> -->
+
+            <!-- TECNOLOGIA UTILIZADA -->
+            <!-- <ng-container *ngSwitchCase="3">
+              <app-tecnologia-utilizada (pageTitulo)="setTitulo($event)"></app-tecnologia-utilizada>
+            </ng-container> -->
+
+            <!-- VISUALIZACION Y TABLEROS DE COMANDOS -->
+            <!-- <ng-container *ngSwitchCase="4">
+              <app-visualizacion-dashboard (pageTitulo)="setTitulo($event)"></app-visualizacion-dashboard>
+            </ng-container> -->
+
+            <!-- ANALÍTICA AVANZADA DE DATOS -->
+            <!-- <ng-container *ngSwitchCase="5">
+              <app-analiticas (pageTitulo)="setTitulo($event)"></app-analiticas>
+            </ng-container> -->
+
+            <!-- PLATAFORMA DE ANALÍTICA DE NEGOCIOS A LA MEDIDA -->
+            <!-- <ng-container *ngSwitchCase="6">
+              <app-plataforma (pageTitulo)="setTitulo($event)"></app-plataforma>
+            </ng-container> -->
+
+            <!-- SUSCRIPCION -->
+            <!-- <ng-container *ngSwitchCase="9">
+              <app-suscripcion (pageTitulo)="setTitulo($event)"></app-suscripcion>
+            </ng-container> -->
+            <!--ANALITICA CLIENTES-->
+            <!-- <ng-container *ngSwitchCase="10">
+              <app-analiticaclientes (pageTitulo)="setTitulo($event)"></app-analiticaclientes>
+            </ng-container> -->
+
+            <!--ANALITICA OPERACIONAL-->
+            <!-- <ng-container *ngSwitchCase="11">
+              <app-analiticaoperacional (pageTitulo)="setTitulo($event)"></app-analiticaoperacional>
+            </ng-container> -->
+
+            <!--ANALITICA VENTAS-->
+            <!-- <ng-container *ngSwitchCase="12">
+              <app-analiticaventas (pageTitulo)="setTitulo($event)"></app-analiticaventas>
+            </ng-container> -->
+
+            <!--ANALITICA FINANCIERA-->
+            <!-- <ng-container *ngSwitchCase="13">
+              <app-analiticafinanciera (pageTitulo)="setTitulo($event)"></app-analiticafinanciera>
+            </ng-container> -->
+
+            <!--READ NEWS-->
+            <!-- <ng-container *ngSwitchCase="14">
+              <app-read-news [idMenu]="mnSel" [idNews]="newsSel" (pageTitulo)="setTitulo($event)"></app-read-news>
+            </ng-container> -->
+
+
+            <!-- CONTACTENOS -->
+            <!-- <ng-container *ngSwitchCase="15">
+              <app-contacto (pageTitulo)="setTitulo($event)"></app-contacto>
+            </ng-container> -->
+
+            <!-- USER -->
+            <ng-container *ngSwitchCase="16">
+              
+              <app-user (pageTitulo)="setTitulo($event)"></app-user>
+             
+            </ng-container>
+
+            <!-- BANNER SUSCRIPCION -->
+            <ng-container *ngSwitchCase="17">
+
+              <app-banner-suscripcion (pageTitulo)="setTitulo($event)"></app-banner-suscripcion>
+            </ng-container>
+
+            <ng-container *ngSwitchDefault></ng-container>
+          </ng-container>
+        </div>
+        <app-footer (idMenu)="UpdateMnSel($event)"></app-footer>
+        <!-- <footer-cmp></footer-cmp> -->
+
+      </div>
+    </div>
+  </div>
+</div>

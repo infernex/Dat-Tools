@@ -1,0 +1,161 @@
+
+<!-- <p-button (click)="showMaximizableDialog()" icon="pi pi-external-link" label="Show"></p-button> -->
+<p-confirmDialog [style]="{width: '50vw'}"  appendTo="body"></p-confirmDialog>
+<p-dialog header="{{titulo}}" appendTo="body" [(visible)]="display" [modal]="true" [style]="{width: '60vw'}" [maximizable]="true" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false" [baseZIndex]="1030">
+
+    <!-- <p-scrollPanel  [style]="{width: '100%', height: '600px'}" styleClass="custombar1"> -->
+
+    <div *ngIf="waitingResponse" style="display: flex; justify-content: flex-end;">
+        <i style="margin-right: 0px; color: #1d89f5; "  uk-spinner="ratio: 0.5"></i>
+    </div>
+    <Form id="editDashboardForm" [formGroup]="dashboardForm" (ngSubmit)="save()">
+          <!--codigo y nombre-->
+    <div class="row">
+        <div class="col-md-6">
+            <div class=form-group>
+                <label>Nombre</label>          
+                <input formControlName="nombre" class="form-control form-control-sm " type="text" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class=form-group>
+                <label>Tipo de dashboard</label>          
+                <p-dropdown [options]="tipoDashboard" [(ngModel)]="selectDashboardType" formControlName="fkDashboardTypeId"></p-dropdown>
+            </div>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-md-6">
+        <div class=form-group>
+            <label>Categoria</label>   
+            <br> 
+            <p-dropdown [options]="categoriasDashboards" formControlName="fkDashboardCategoryId" ></p-dropdown>  
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class=form-group>
+            <label>Tipo de Acceso</label>  
+                  <br>
+            <!-- <input formControlName="fkItemTYpe" class="form-control form-control-sm " type="text" placeholder=""> -->
+            <p-dropdown [options]="tipoAcceso" [(ngModel)]="selectItemAccess" formControlName="fkItemTYpe" ></p-dropdown>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div *ngIf="selectDashboardType === 2" class="col-md-12">
+        <div class=form-group>
+            <label>URL</label>          
+            <input formControlName="urlTableau" class="form-control form-control-sm " type="text" placeholder="">
+        </div>
+    </div>
+    <div *ngIf="selectDashboardType === 3" class="col-md-12">
+        <div class=form-group>
+            <label>Workspace</label>          
+            <input formControlName="workspaceIdPowerBi" class="form-control form-control-sm " type="text" placeholder="">
+        </div>
+    </div>
+    <div *ngIf="selectDashboardType === 3" class="col-md-6">
+        <div class=form-group>
+            <label>ID reporte Power BI</label>          
+            <input formControlName="reportIdPowerBi" class="form-control form-control-sm " type="text" placeholder="">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class=form-group>
+            <img src="{{dashboard.urlImage}}" alt="" width="100" height="100">
+            <!-- <label>URL Imagen</label>          
+            <input formControlName="urlImage" class="form-control form-control-sm " type="text" placeholder="">
+            -->
+            <button *ngIf="!isNew()" type="button" class="btn btn-primary btn-round" 
+          style="color: white; margin-bottom: 10px;" (click)="uploadFile()"> <i
+            class="fas fa-camera"></i> Asignar imagen
+        </button>
+        <button *ngIf="isNew()" type="button" class="btn btn-primary btn-round" 
+        style="color: white; margin-bottom: 10px;" (click)="uploadFile()"> <i
+          class="fas fa-camera"></i> Editar imagen
+      </button>
+        </div>
+    </div>
+</div>
+    <div class="row">
+       
+        <div class="col-md-12">
+            <div class=form-group>
+                <label>Fuentes</label>          
+                <input formControlName="fuentes" class="form-control form-control-sm " type="text" placeholder="">
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class=form-group>
+                <label>Periocidad</label>          
+                <input formControlName="periocidad" class="form-control form-control-sm " type="text" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class=form-group>
+                <label>Notas metodologicas</label>          
+                <!-- <input formControlName="notasMetod" class="form-control form-control-sm " type="text" placeholder=""> -->
+                <textarea formControlName="notasMetod" class="form-control form-control-sm dat-textarea" rows="3"></textarea> 
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class=form-group>
+                <label>Descripcion</label>  
+                <textarea formControlName="descripcion" class="form-control form-control-sm dat-textarea" rows="3"></textarea>        
+                
+            </div>
+        </div>
+    </div>
+    <!-- <div class="render-imagen-post">
+        <img class="preview-imagen"  [src]="dashUrlImg">
+    </div>
+    <div class="div_input">
+        <p class="texto-InputFile-Imagen"><i class="fas fa-plus"></i> Agregar Imagen</p>
+        <input class="InputFile-Imgen"  (change)='capturarImg($event.target.files)' type="file">
+       
+
+        
+    </div> -->
+
+<!--erros-->
+<div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-warning" role="alert" *ngIf="errors.length> 0">            
+            <ul>
+                <li *ngFor="let error of errors">
+                {{error}}
+                </li>
+            </ul>
+        </div>
+    </div>                   
+</div>
+    </Form>
+
+    
+<!-- </p-scrollPanel> -->
+        <ng-template pTemplate="footer">
+            <div class="row dat-container-tools">
+                <div class="col-md-12">
+                    <div class="pull-right">
+                        <button pButton type="button" label="Cerrar" icon="pi pi-times-circle" class="p-button-secondary p-button-raised p-button-rounded" (click)="closeDialog()" style="font-size: 12px;"></button>                                                                    
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>                        
+                        <button pButton type="submit" label="Guardar" icon="pi pi-plus-circle" class="p-button-success p-button-raised p-button-rounded" [disabled]="dashboardForm.invalid || waitingResponse" form="editDashboardForm" *ngIf="hasEditPermission" style="font-size: 12px;"> </button>                                            
+                    <i class="fa fa-ellipsis-v" aria-hidden="true" *ngIf="isNew()"></i>
+                        <button pButton type="button" label="Eliminar" icon="pi pi-minus-circle" class="p-button-danger p-button-raised p-button-rounded" (click)="delete()" *ngIf="isNew() && hasDeletePermission" style="font-size: 12px;"></button>     
+                       
+                        <!--ACCIONES-->
+                    <!-- <i class="fa fa-ellipsis-v" aria-hidden="true" *ngIf="isNew()"></i>
+                    <p-splitButton label="Acciones" icon="pi pi-list" [model]="items" *ngIf="isNew()"></p-splitButton> -->
+                    </div>         
+                </div>                  
+            </div>
+            <!-- <p-button icon="pi pi-check" (click)="display=false" label="Yes" class="p-button-text"></p-button>
+            <p-button icon="pi pi-times" (click)="closeDialog()" label="No"></p-button> -->
+        </ng-template>
+    
+        <app-upload-file #uploadfile (uploadedResource)="onuploadedResource($event)" [filetypesIn]="filetype">
+        </app-upload-file>
+</p-dialog>
+

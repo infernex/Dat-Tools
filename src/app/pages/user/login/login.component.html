@@ -1,0 +1,61 @@
+<div class="contenedor-login" style="display: flex; justify-content: center;">
+    <div class="card card-dat card-body"
+        style="max-width: 440px; min-height: 300px; margin:auto; padding: 50px; box-shadow: 0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)">
+
+        <img src="{{logoTraining}}" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 15px;"
+            width="150px" height="150px">
+        <form [formGroup]="userForm" (ngSubmit)=login()>
+            <div class="form-group">
+                <div class="input-group dat-input-content">
+                    <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+                    <i class="now-ui-icons users_single-02"></i>
+                    <input type="text" formControlName="userName" class="form-control input-secondary"
+                        placeholder="Usuario o dirección de correo">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group dat-input-content">
+                    <!-- <span class="input-group-addon"><i class="fa fa-key"> </i></span> -->
+                    <i class="now-ui-icons objects_key-25"></i>
+                    <!-- <input type="password" formControlName="password" class="form-control input-secondary" placeholder="Contraseña">  -->
+
+                    <div class="uk-inline" style="display: block; width: 95%;">
+                        <a *ngIf="eyePassword" class="uk-form-icon uk-form-icon-flip" style="color: #999999;"
+                            (click)="showPassword()"> <i class="far fa-eye"></i></a>
+                        <a *ngIf="!eyePassword" class="uk-form-icon uk-form-icon-flip" style="color: #999999;"
+                            (click)="showPassword()"> <i class="far fa-eye-slash"></i></a>
+                        <input formControlName="password" class="form-control  input-secondary" type="{{typePassword}}"
+                            placeholder="Contraseña">
+                    </div>
+
+                </div>
+
+                <!-- <button pButton type="submit" label="Iniciar Sesión" icon="pi pi-sign-in" class=" ui-button-raised ui-button-rounded btn btn-block  btnnuevo" [disabled]="userForm.invalid"></button>       -->
+
+                <button type="submit" class="uk-button uk-button-primary"
+                    style="width: 100%; margin-top: 35px; font-size: 14px; padding: 5px;" [disabled]="userForm.invalid">
+                    Iniciar sesión</button>
+
+            </div>
+
+            <div style=" display:flex; justify-content: center;">
+                <a (click)="resetPwd()" class="forgot" style='cursor: pointer; font-size: 13px; color: #666666;'>
+                    ¿Olvidó su <span>contraseña?</span></a>
+            </div>
+
+            <div style="display:flex; justify-content: center; margin-top:100px ">
+                <a class="forgot" style="cursor: pointer; font-size: 13px;" href="https://training.dat-analytics.com/#/registration">
+                    Crear una cuenta <span uk-icon="icon: arrow-right; ratio: 1"></span></a>
+            </div>
+
+        </form>
+        <!-- <button type="button" class="btn btn-info btn-fill pull-right" (click)="changePwd()">Cambiar Contraseña</button> -->
+    </div>
+</div>
+
+<app-reset-pwd #editPwd (objectCreated)="onObjectCreated($event)">
+
+</app-reset-pwd>
+
+<app-welcome-user #welcomeUser>
+</app-welcome-user>

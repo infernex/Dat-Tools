@@ -1,0 +1,135 @@
+<footer *ngIf="fullFooter"
+    style="padding:60px 100px 60px 100px; background: linear-gradient(-135deg, rgb(26, 117, 207), #071757);">
+
+    <div class="row">
+        <div class="col-md-2">
+            <a class="enlacesfooter up" uk-scroll href="#"> <span uk-icon="icon: chevron-up; ratio: 2"></span> </a>
+        </div>
+        <div class="col-md-3" style="margin-top:40px">
+
+            <p style="color: #fff; font-size: 18px">Sobre nosotros</p>
+            <ul>
+                <li>
+                    <a (click)="chargeContent(1)" class="enlacesfooter" href="#modal-container-footer" uk-toggle>Nuestra
+                        Empresa</a>
+                </li>
+
+                <li>
+                    <a (click)="chargeContent(2)" class="enlacesfooter" href="#modal-container-footer" uk-toggle>Nuestro
+                        Esquipo</a>
+                </li>
+                <li>
+                    <a (click)="chargeContent(3)" class=" enlacesfooter" href="#modal-container-footer"
+                        uk-toggle>Nuestra Tecnologia</a>
+                </li>
+                <br>
+                <li>
+                    <a (click)="chargeContent(4)" class=" enlacesfooter" href="#modal-container-footer"
+                        uk-toggle>Contáctenos</a>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="col-md-4" style="margin-top: 35px; padding-right: 120px ;">
+            <p style="color: #fff; font-size: 18px">Nuestros Servicios</p>
+
+            <ul>
+                <li>
+                    <a (click)="chargeContent(5)" class=" enlacesfooter" href="#modal-container-footer"
+                        uk-toggle>Visualizacion y Comando de Tableros</a>
+                </li>
+                <li>
+                    <a (click)="chargeContent(6)" class="enlacesfooter" href="#modal-container-footer"
+                        uk-toggle>Analiticas
+                        Avanzada de Datos</a>
+                </li>
+                <li>
+                    <a (click)="chargeContent(7)" class="enlacesfooter" href="#modal-container-footer"
+                        uk-toggle>Plataformas de Analiticas de Negocios a la
+                        Medida</a>
+                </li>
+
+                <br>
+
+                <!-- <li>
+                    <a class="enlacesfooter" [routerLink]="['']" style="font-size: 15px;"> Dat-Training </a>
+                </li> -->
+                <li>
+                    <a class="enlacesfooter" href="https://500a465e0f6f156586eb562b3b25cafe.blogspot.com"
+                        target="_blank" style="font-size: 15px;">Pensamiento BI</a>
+                </li>
+            </ul>
+
+
+        </div>
+        <div class="col-md-3" style="margin-top: 20px;">
+            <p style="color: #ffffff; font-size: 27px"><span style="color: #9faebe">+505</span> 8880 8097 </p>
+            <!-- <p style="color: #9faebe; font-size: 30px"><span style="color: #64717f">+1 609</span> 710 0436</p> -->
+            <p> <a style="color:#fff; text-decoration: none;"
+                    href="mailto:info@dat-analytics.com?Subject=Consulta">info@dat-analytics.com</a></p>
+            <p class="infoFooter">Managua, Nicaragua</p>
+            <p class="infoFooter"> Villa Fontana,
+                <br> Del Club Terraza 1 Cuadra Al Lago, Edificio Orange, Mano Izquierda Esquinero</p>
+            <a class="enlacesfooter" uk-icon="twitter"></a>
+            <a class="enlacesfooter" target="_blank"
+                href="https://www.linkedin.com/company/dat-analytics?trk=public_profile_experience-item_result-card_subtitle-click"
+                uk-icon="linkedin"></a>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 70px;">
+        <div class="col-md-1">
+            <img src="https://res.cloudinary.com/djokqylda/image/upload/v1614272850/Dat-Analytics/Web.Dat-Analytics/Logos/logoblanco_lklzm4.png"
+                width="100" style="min-width: 90px !important;">
+        </div>
+
+        <div class="col-md-8" style=" text-align: center;">
+            <h5 class="text-derechos" style="">
+                &copy; Dat-Analytics {{ anio }}
+            </h5>
+        </div>
+
+        <div class="col-md-3">
+            <img class="uk-border-rounded"
+                src="https://res.cloudinary.com/djokqylda/image/upload/v1614272689/Dat-Analytics/Iconos/tableau-certified_mjlorq.png"
+                width="270" height="270">
+        </div>
+    </div>
+
+</footer>
+
+
+<footer *ngIf="!fullFooter" class="footer">
+    <div class="container-fluid">
+        <nav class="pull-left">
+            <ul>
+                <li>
+                    <a href="https://500a465e0f6f156586eb562b3b25cafe.blogspot.com/">
+                        Pensamiento BI
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+        <div class="copyright pull-right">
+            <a href="https://www.dat-analytics.com" style="color: #1e87f0">
+                Dat-Analytics
+            </a> <span style="color: #999999;"> &copy; {{test | date: 'yyyy'}}</span>
+        </div>
+    </div>
+</footer>
+
+
+<!-- <a class="uk-button uk-button-default" href="#modal-container-footer" uk-toggle>Open</a> -->
+
+<div id="modal-container-footer" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close
+            style="margin-top: 20px !important; margin-right:20px;"></button>
+        <img src="https://res.cloudinary.com/djokqylda/image/upload/v1599863757/Dat-Analytics/Web.Dat-Analytics/Logos/logooficial_gopcc2.png"
+            style="max-width:80px !important;">
+        <!-- <app-content-dat-analytics #contentDatComponent></app-content-dat-analytics> -->
+    </div>
+</div>

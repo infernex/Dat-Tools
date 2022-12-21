@@ -1,0 +1,57 @@
+
+<div class="panel-header panel-header-sm">
+</div>
+<div *ngIf="loading" class="dat-welcome" style="margin-top: 30px; ">
+  <app-loading></app-loading>
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <!-- insertar router outlet -->
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-user">
+        <div class="image">
+          <img src="../assets/img/bg5.jpg" alt="...">
+        </div>
+        <div class="card-body">
+          
+          <div class="author">
+            <a href="#">
+              <img class="avatar border-gray" src="{{urlprofilepicture}}" alt="...">
+              <h5 class="title">{{fullName}}</h5>
+            </a>
+            <p class="description">
+              @{{userName}}
+            </p>
+          </div>
+         
+          <p class="description text-center">
+            "Lamborghini Mercy
+            <br> Your chick she so thirsty
+            <br> I'm in that two seat Lambo"
+          </p>
+        </div>
+        <hr>
+        <div class="button-container">
+          <button type="button" class="btn btn-primary btn-round"
+          style="color: white; margin-bottom: 10px;" (click)="uploadFile()"> <i
+            class="fas fa-camera"></i> Cambiar foto
+        </button>
+          <!-- <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+            <i class="fab fa-google-plus-g"></i>
+          </button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-upload-file #uploadfile (uploadedResource)="onuploadedResource($event)" [filetypesIn]="filetype">
+</app-upload-file>

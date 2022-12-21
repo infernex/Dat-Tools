@@ -1,0 +1,307 @@
+<!-- <section>
+  <div class="dat-main-backgroung">
+
+    <div class="banner-portafolio">
+
+      <div style="display: flex; justify-content: center;">
+        <figure class="imagen-portafolio-movil" style="width: 350px;">
+          <img
+            src="https://res.cloudinary.com/djokqylda/image/upload/v1654296800/Dat-Analytics/Web.Dat-Analytics/pc-3d_sjwxb8.png"
+            alt="pc">
+        </figure>
+      </div>
+
+
+      <div style="display:flex; align-items: center; justify-content: space-between;">
+        <div style="max-width: 100%;">
+          <h1 class="h1-main wow fadeInUp" data-wow-delay="0.6s" data-plugin="appear" data-appear-effects="text">
+            Nuestras herramientas</h1>
+          <h3 class="h2-main wow fadeInDown" data-wow-delay="0.8s">Estaremos agregando constantemente nuevas
+            visualizaciones. <br> Pronto se habilitarán las suscripciones para tener acceso a todo un catálogo de
+            herramientas.</h3>
+
+        </div>
+
+        <figure class="imagen-portafolio" style="width: 350px;">
+          <img
+            src="https://res.cloudinary.com/djokqylda/image/upload/v1654296800/Dat-Analytics/Web.Dat-Analytics/pc-3d_sjwxb8.png"
+            alt="pc">
+        </figure>
+      </div>
+    </div>
+  </div>
+
+
+</section> -->
+
+<!-- <section style=" padding: 100px 0px 100px 0px;">
+    <div style="height: 50vh;display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <img src="https://res.cloudinary.com/djokqylda/image/upload/v1610730051/Dat-Training/Imagenes%20Demo/build_zjvrrl.png" width="20%" alt="">
+      <p style="font-size: 100%; color:#999999; font-weight: bold; margin-top: 40px;">Próximamente</p>
+      <p style="font-size: 80%; color:#999999; margin-top: -15px;">Estamos construyendo esta sección</p>
+    </div>
+  </section> -->
+ 
+<!-- <div class="uk-flex" style="margin-left:0;margin-right:0; "> -->
+  <!-- <div class="row"> -->
+  <!-- <div id="mySidenav" class="sidenav col-3 text-left">
+
+    <div
+      style="display: flex; flex-direction: column;border-bottom: solid 0.5px #e5e5e5b7; padding-bottom: 30px ;  margin-bottom:30px;">
+      <a style="color: #464441; background: none !important;" (click)="closeNav()" style="align-self:flex-end">
+        <p uk-icon="icon: arrow-left; ratio: 1.5"></p>
+      </a>
+      <div style="align-self:center; margin-top: 10px; text-align: center;">
+        <img
+          src="https://res.cloudinary.com/djokqylda/image/upload/v1614272848/Dat-Analytics/Web.Dat-Analytics/Logos/iconDat_oggen6.png"
+          class="porLogo" width="50" style=" opacity: 0.7;"><img />
+        <h3 style="color: #464441; margin: 0px; font-size: 18px; margin-top: 20px;">Herramientas</h3>
+      </div>
+    </div>
+
+
+    <details [class]="getClaseCSS(0)" (click)="activarCategoria(0,'Todas las categorias')">
+      <summary class="drop">
+        {{dashLabelAllCategories}}
+      </summary>
+    </details>
+    <details open *ngFor="let item of dashboardsCat" [class]="getClaseCSS(item.dashboardCategoryId)"
+      (click)="activarCategoria(item.dashboardCategoryId,item.name)">
+      <summary class="drop">
+        {{item.name}}
+      </summary>
+    </details> -->
+
+    <!-- <details open>
+      <summary class="drop">
+        Bancos
+      </summary>
+
+      <ol>
+        <li *ngFor="let item of dashboards" routerLinkActive="active"> <a
+            (click)="dashSelected(item.dashboardId)">{{item.nombre}}</a> </li>
+      </ol>
+
+    </details>
+
+
+    <details open>
+      <summary class="drop">
+        Economicos
+      </summary>
+
+      <ol>
+        <li *ngFor="let item of dashboards" routerLinkActive="active"> <a
+            (click)="dashSelected(item.dashboardId)">{{item.nombre}}</a> </li>
+      </ol>
+    </details> -->
+
+
+    <!-- Cuadro de dialogo para iniciar sesion -->
+    <!-- <div *ngIf="!isLogin" style="background: rgb(252, 253, 255); padding: 30px; border-radius: 5px;">
+      <p style="font-size: 12px; font-weight: bold;">No has encontrado
+        lo que necesitas?</p>
+      <p class="mensaje">Estamos agregando
+        constantemente
+        nuevas herramientas</p>
+      <span class="acceder navLink" (click)="updateMnSel(16)" data-effect="unfolding">Acceder</span>
+    </div>  -->
+
+    
+  <!-- </div> -->
+
+
+  <!-- Mostrar listado de dashboards -->
+ <div class="panel-header panel-header-sm">
+  </div>
+ 
+  <div id="main" class="main-content">
+    <div class="uk-flex uk-flex-between">
+        <!-- <p style="font-weight: bold; font-size: 14px;">{{catActivaNombre}}</p> -->
+      <div>
+        <p style="font-weight: bold; font-size: 14px;">{{catActivaNombre}}</p>
+      </div>
+
+      <div>
+      <button *ngIf="modeAdmin" type="button" (click)="add()" class="btn btn-primary btn-success"
+      style="margin-right: 10px;"><span uk-icon="icon:plus-circle;
+      ratio: 1"></span> Agregar</button>
+    </div>
+    </div>
+   
+    <!-- flecha de herramientas -->
+    <!-- <div class="menuNav">
+      <a id="open" (click)="openNav()" class="openside" style="margin-top:10px;" data-aos="fade-up"
+        data-aos-duration="1000">
+        <p uk-icon="icon: arrow-right; ratio: 1.5" style="font-size: 14px; font-weight: bold;">Herramientas</p>
+      </a>
+    </div> -->
+
+
+
+    <!-- COMENTAR ESTE SIGUIENTE DIV -->
+    <!-- <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+
+      <div class="uk-card-default uk-card-body dash1 animated fadeInUp" id="dash1">
+        <span *ngIf="!isLogin && !showDash" class="uk-label uk-label-danger"
+          style="float: right; font-size: 11px;">Privado</span>
+
+        <h2 class="uk-heading-divider dash-title" style="margin:0px !important">{{nameDashSel}} </h2>
+
+        <br>
+        <iframe *ngIf=" (isLogin && showDash) || showDash" [src]="urlDashSafe" width="100%" height="500px"> </iframe>
+                        <div id="contenedor-dash">
+                          <img *ngIf="!isLogin && showImageDash" data-src="{{imgDashSel}}" class="imagenDash" uk-img
+                            id="imgDash">
+                          <div class="arroweye">
+
+
+                            <button *ngIf="!isLogin && !showDash"
+                              class="uk-button uk-button-default uk-button-small navLink"
+                              style="border:1px solid #1e87f0 !important; border-radius: .25rem; color:#1e87f0; background: #ffffff; font-weight: bold; font-size: 12px;"
+                              (click)="updateMnSel(16)" data-effect="unfolding"><span class="uk-margin-small-right"
+                                uk-icon="move"></span>Interactuar</button>
+
+                          </div>
+                        </div>
+
+                    </div>
+              </div> -->
+
+    <!-- Mostrar dashboards -->
+    <!-- <div style=" padding: 10px 50px 40px 50px;"> -->
+
+     
+
+      <!-- uk-grid-match -->
+      <div class="uk-grid-collapse uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
+
+        <div *ngFor="let item of dashboards">
+          <!-- <div class="header-admin"><i class="now-ui-icons design_bullet-list-67"></i><i class="now-ui-icons text_caps-small"></i></div> -->
+          <div *ngIf="modeAdmin" class="header-admin" (click)="edit(item.dashboardId)"><i class="now-ui-icons ui-1_settings-gear-63"></i></div>
+          <div class="card-dash uk-card" href="#modal-center" uk-toggle (click)="dashSelected(item.dashboardId)" >
+            <div *ngIf="item.fkItemTYpe == 1" class="uk-card-badge uk-label-danger"
+              style="font-size: 12px; font-weight: bold;">
+              Privado</div>
+             
+
+            <div class="imgDash">
+              <figure style="margin:0px 0px 5px 0px">
+                <img src="{{item.urlImage}}" alt="">
+              </figure>
+            </div>
+            <div class="descDash">
+              <p style="font-size: 14px; font-weight: bold; padding: 0px; margin:0px ">{{item.nombre}}</p>
+              <p style="font-size: 14px; font-weight: bold; padding: 0px; margin:0px ">
+                {{item.dashboardTypeName}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+      <!-- modal dashboard -->
+    <div id="modal-center" class="uk-flex-top uk-modal-container" uk-modal>
+
+      <div class="uk-modal-dialog uk-margin-auto-vertical">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+          <!-- style="color: #ffffff; background: linear-gradient(-135deg, #071757 ,rgb(26, 117, 207));" -->
+          <h2 class="uk-modal-title">{{nameDashSel}}</h2>
+        </div>
+
+        <div class="uk-modal-body">
+          <div class="infoDash">
+            <p style="font-size: 13px; font-weight: bold; padding: 0px; margin:0px"><span uk-icon="icon:commenting;
+              ratio: 1"></span> Descripcion:
+              {{descripcionDashSele}} </p>
+            <p style="font-size: 13px; font-weight: bold; padding: 0px; margin:0px "> <span uk-icon="icon:link;
+              ratio: 1"></span> Fuentes: {{fuentesDashSel}}</p>
+            <p style="font-size: 13px; font-weight: bold; padding: 0px; margin:0px "> <span uk-icon="icon:history;
+              ratio: 1"></span> Periocidad: {{periocidadDashSel}}
+            </p>
+            <p style="font-size: 13px; font-weight: bold; padding: 0px; margin:0px "> <span uk-icon="icon:desktop;
+              ratio: 1"></span> Herramienta creacion:
+              {{herraDashSel}}</p>
+            <p style="font-size: 13px; font-weight: bold; padding: 0px; margin:0px "> <span uk-icon="icon:file-text;
+              ratio: 1"></span> Notas metodologicas:
+              {{notasMetodDashSel}}</p>
+          </div>
+
+
+
+          <!-- Slider mostrar imagenes de cada dashboard -->
+          <div uk-slider="sets: true">
+            <div class="uk-position-relative">
+              <div class="uk-slider-container uk-visible-toggle uk-dark" tabindex="-1">
+                <ul class=" uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m">
+                  <li *ngFor="let item of dashboardImgSel">
+                    <div class="card-dash">
+                      <!-- <div *ngIf="!isLogin" class="uk-card-badge uk-label-warning">Premium</div> -->
+                      <figure style="margin:0px 0px 5px 0px">
+                        <img src="{{item.url}}" alt="">
+                        <!-- <span class="acceder navLink" (click)="ObtenerSuscripcion(17)"
+                          data-effect="unfolding">Acceder</span> -->
+                      </figure>
+                    </div>
+                  </li>
+
+                </ul>
+
+              </div>
+
+              <a class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+              <a class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+
+            </div>
+            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+          </div>
+        </div>
+        <div class="uk-modal-footer">
+          <!-- <button class="uk-button uk-button-default uk-button-small navLink"
+            style="border:1px solid #1e87f0 !important; border-radius: .25rem; color:#1e87f0; background: #ffffff; font-weight: bold; font-size: 12px;"><span
+              class="uk-margin-small-right" uk-icon="move"></span> Interactuar
+          </button> -->
+          <a *ngIf="isLogin && accessDash" class="uk-button uk-button-default uk-button-small"
+            href="https://app.powerbi.com/view?r=eyJrIjoiOTIxYWNjYzEtNjQzNi00MTIwLWI0NWEtMWY2YmYxZmExYTViIiwidCI6IjUwMjQ2NTExLTdjNDQtNDAzNi04YjQxLTJiNjlhMWUwZjI4YiIsImMiOjl9"
+            style="border:1px solid #1e87f0 !important; border-radius: .25rem; color:#1e87f0; background: #ffffff; font-weight: bold; font-size: 12px;"><span
+              class="uk-margin-small-right" uk-icon="move"></span> Interactuar
+          </a>
+          <button *ngIf="isLogin && !accessDash"
+            class="uk-button uk-button-primary btn-primaryDat-blue navLink uk-modal-close"
+            (click)="ObtenerSuscripcion(17)" data-effect="unfolding">
+            Suscribete
+          </button>
+
+          <!-- <button class="uk-modal-close" uk-icon="move" type="button" uk-close>close</button> -->
+
+          <!-- <a class="uk-button uk-button-default uk-button-small"
+            href="https://app.powerbi.com/view?r=eyJrIjoiOTIxYWNjYzEtNjQzNi00MTIwLWI0NWEtMWY2YmYxZmExYTViIiwidCI6IjUwMjQ2NTExLTdjNDQtNDAzNi04YjQxLTJiNjlhMWUwZjI4YiIsImMiOjl9">link</a> -->
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+<!--edit-->
+<!-- <app-edit-dashboard  #editDashboard (objectCreated)="onObjectCreated($event)" (objectUpdated)="onObjectUpdated($event)"
+(objectDeleted)="onObjectDeleted($event)">
+</app-edit-dashboard> -->
+
+<app-edit-dashboard #editDashboard (objectCreated)="onObjectCreated($event)" (objectUpdated)="onObjectUpdated($event)"
+(objectDeleted)="onObjectDeleted($event)"></app-edit-dashboard>
+<!-- #editDashboard (objectCreated)="onObjectCreated($event)" (objectUpdated)="onObjectUpdated($event)"
+    (objectDeleted)="onObjectDeleted($event)" -->
+
+    <!-- Subir imagenes -->
+    <!-- <app-upload-file #uploadfile (uploadedResource)="onuploadedResource($event)" [filetypesIn]="filetype">
+    </app-upload-file> -->
+  <!-- </div> -->
+
+  <!-- </div> -->
+<!-- </div> -->
+  <!-- </div> -->
